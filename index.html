@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container-main">
+    <div class="container">
+        <h1 class="text-center mb-4">Expense Tracker</h1>
+
+        <!-- Input Row -->
+        <div class="row g-2 align-items-end">
+
+            <!-- Expense Name -->
+            <div class="col-md-4">
+                <input 
+                    type="text" 
+                    id="expenseName" 
+                    class="form-control" 
+                    placeholder="Expense Name">
+            </div>
+
+            <!-- Amount -->
+            <div class="col-md-2">
+                <input 
+                    type="number" 
+                    id="amount" 
+                    class="form-control" 
+                    placeholder="Amount">
+            </div>
+
+            <!-- Category -->
+            <div class="col-md-2">
+                <select 
+                    id="category" 
+                    class="form-control">
+                    <option value="Food">Food</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Entertainment">Entertainment</option>
+                </select>
+            </div>
+
+            <!-- Date -->
+            <div class="col-md-2">
+                <input 
+                    type="date" 
+                    id="date" 
+                    class="form-control">
+            </div>
+
+            <!-- Button (FIXED) -->
+            <div class="col-md-2 d-grid">
+                <button 
+                    id="addExpenseBtn" 
+                    class="btn btn-success"
+                    type="button">
+                    Add Expense
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Table -->
+        <table class="table table-bordered table-hover mt-4">
+            <thead>
+                <tr>
+                    <th>Expense Name</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="expenseTable">
+                <!-- Data inserted by JavaScript -->
+            </tbody>
+        </table>
+
+        <!-- Total -->
+        <div class="row mt-3">
+            <div class="col text-end">
+                <p class="fw-bold fs-5">
+                    Total: ₹<span id="totalAmount">0.00</span>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
